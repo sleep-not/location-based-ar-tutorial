@@ -1,0 +1,12 @@
+#footer {
+    position: fixed;
+    bottom: 0px;
+}
+
+#onebleft {
+    left: 0px;
+}
+
+#onebright {
+    right: 0px;
+}
