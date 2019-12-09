@@ -35,7 +35,7 @@ AFRAME.registerComponent('vidhandler', {
             }
         });
 
-        function refrespage() {
+        function refreshpage() {
             location.reload();
         }
 

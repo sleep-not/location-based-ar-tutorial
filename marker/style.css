@@ -1,4 +1,7 @@
-.row {
+.onebleft {
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
   background-color : #31B0D5;
   color: white;
   padding: 10px 20px;
@@ -6,14 +9,20 @@
   border-color: #46b8da;
 }
 
-#onebleft {
-  position: fixed;
-  bottom: 10px;
-  left: 10px;
-}
-
-#onebright {
+.onebright {
   position: fixed;
   bottom: 10px;
   right: 10px;
+  background-color : #31B0D5;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 4px;
+  border-color: #46b8da;
 }
+
+/* #footer {
+  position: fixed;
+  bottom: -4px;
+  right: 10px;
+
+} */
