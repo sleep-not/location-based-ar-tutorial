@@ -67,29 +67,35 @@
 </head>
 
 <body style="margin : 0px; overflow: hidden;">
-    <a-scene embedded artoolkit='sourceType: webcam; detectionMode: mono; maxDetectionRate: 60; canvasWidth: 200; canvasHeight: 200'>
+    <a-scene embedded arjs='sourceType: webcam; detectionMode: mono; maxDetectionRate: 60; debugUIEnabled: false;'>
         <a-assets>
             <video preload="auto" id="vid" poster="../kanji.png" response-type="arraybuffer" loop="false" crossorigin webkit-playsinline playsinline controls>
                 <source  src="../pool360p.mp4">
                 <img src="../kanji.png"> Your browser does not support Or Else Please Click Reset Button.
             </video>
         </a-assets>
-        <a-marker id="memarker" type="pattern" url="hiro" vidhandler>
-            <a-plane position='0 0.1 0' rotation="-90 0 0" material='transparent:true;src:#vid' controls></a-plane>
+        <a-marker preset='hiro' vidhandler>
+
+            <a-video src="#vid" width="2" height="1.125" position="0 0 -5" controls</a-video>
+
         </a-marker>
+    
+<!--         <a-marker id="memarker" type="pattern" url="hiro" vidhandler>
+            <a-plane position='0 0.1 0' rotation="-90 0 0" material='transparent:true;src:#vid' controls></a-plane>
+        </a-marker> -->
         <a-entity camera></a-entity>
     </a-scene>
     <div class="footer">
         <div class="row">
-            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pull-left">
-                <div class="onebleft">
+            <div <!-- class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pull-left" -->>
+                <!-- <div class="onebleft"> -->
                     <button onclick="vid.playvid()" class="btn btnskips">Play (CHROME)</button>
-                </div>
+                <!-- </div> -->
             </div>
-            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pull-right">
-                <div class="onebright">
+            <div <!-- class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pull-right" -->>
+                <!-- <div class="onebright"> -->
                     <button onclick="refrespage()" class="btn btnskips">Refresh</button>
-                </div>
+                <!-- </div> -->
             </div>
         </div>
     </div>
